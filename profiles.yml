@@ -1,0 +1,10 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: './my_project.duckdb'
+      threads: 4
+      attach:
+        - path: './raw.duckdb'
+          alias: raw
